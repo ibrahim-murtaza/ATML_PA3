@@ -1,0 +1,6 @@
+Model,Method,Best Test Acc@1 (%),Best Test Acc@5 (%),Training Time (min),Inference (ms/batch)
+Teacher (VGG-16),N/A,74.00,90.54,N/A,N/A
+Student (VGG-11) - SI,SI,66.12,87.11,18.77,11.48
+Student (VGG-11) - LM,LM,69.27,88.07,20.71,11.50
+Student (VGG-11) - LS,LS,66.99,87.73,19.60,11.43
+Student (VGG-11) - DKD,DKD,69.57,86.71,20.97,11.55
