@@ -9,7 +9,7 @@ The trained model weights for Task 3.1 (Logit Matching Variants) can be download
 To use these weights:
 
 1. Download all model files from the Google Drive folder
-2. Place them in: `results/task3_1/models/`
+2. Place them in: `Knowledge_Distillation/results/task3_1/models/`
 3. The models include:
    - `student_SI_best.pth` - Independent Student (VGG-11)
    - `student_LM_best.pth` - Logit Matching (KD)
