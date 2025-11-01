@@ -5,4 +5,6 @@ student_vgg11_LS_best.pth
 student_vgg11_DKD_best.pth
 student_vgg11_CRD_best.pth
 student_vgg11_HINTS_best.pth
+student_vgg11_CRD_color_best.pth
+teacher_vgg16_color_invariant.pth
 data/
