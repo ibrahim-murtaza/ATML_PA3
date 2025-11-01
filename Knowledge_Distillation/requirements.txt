@@ -1,7 +1,11 @@
+opencv-python
+matplotlib
+numpy
+pandas
+seaborn
 torch
 torchvision
-matplotlib
-pandas
-numpy
-seaborn
+grad-cam
+scipy
+scikit-image
 tqdm

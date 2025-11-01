@@ -1,3 +1,4 @@
+teacher_vgg16_cifar100.pth
 student_vgg11_SI_best.pth
 student_vgg11_LM_best.pth
 student_vgg11_LS_best.pth
