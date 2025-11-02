@@ -1,0 +1,18 @@
+{
+  "fp32": {
+    "ptq_accuracy": 74.82,
+    "qat_accuracy": "N/A"
+  },
+  "fp16": {
+    "ptq_accuracy": 74.81
+  },
+  "bf16": {
+    "ptq_accuracy": 74.77
+  },
+  "int8": {
+    "ptq_accuracy": 74.79
+  },
+  "int4": {
+    "ptq_accuracy": 74.85
+  }
+}

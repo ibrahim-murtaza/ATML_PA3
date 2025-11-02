@@ -1,0 +1,104 @@
+PyTorch Version: 2.6.0+cu126
+CUDA Available: True
+Using device: cuda
+
+CIFAR-100 Dataloaders ready.
+
+Fine-tuning FP32 VGG-11 model on CIFAR-100 to create a baseline...
+Epoch 1/10, Loss: 1.915
+Epoch 2/10, Loss: 1.126
+Epoch 3/10, Loss: 0.859
+Epoch 4/10, Loss: 0.658
+Epoch 5/10, Loss: 0.504
+Epoch 6/10, Loss: 0.375
+Epoch 7/10, Loss: 0.275
+Epoch 8/10, Loss: 0.207
+Epoch 9/10, Loss: 0.153
+Epoch 10/10, Loss: 0.125
+Finished fine-tuning.
+
+Baseline FP32 VGG-11 Accuracy: 74.82%
+
+--- Running PTQ for fp16 and bf16 ---
+PTQ fp16 Accuracy: 74.81%
+
+Running PTQ for bf16...
+PTQ bf16 Accuracy: 74.77%
+
+--- Running PTQ for int8 and int4 ---
+PTQ int8 Accuracy: 74.79%
+
+Casting model to bfloat16 for int4 PTQ...
+PTQ int4 Accuracy: 74.85%
+
+--- Saving progress ---
+Saved baseline model state to 'baseline_model_fp32.pth'
+Saved PTQ results to 'quantization_results_part1.json'
+
+--- Loaded previous results ---
+{
+  "fp32": {
+    "ptq_accuracy": 74.82,
+    "qat_accuracy": "N/A"
+  },
+  "fp16": {
+    "ptq_accuracy": 74.81
+  },
+  "bf16": {
+    "ptq_accuracy": 74.77
+  },
+  "int8": {
+    "ptq_accuracy": 74.79
+  },
+  "int4": {
+    "ptq_accuracy": 74.85
+  }
+}
+
+--- Successfully reloaded baseline_model_fp32 ---
+You are ready to continue with QAT or Mixed-Precision.
+Dataloaders ready.
+
+--- Running QAT for bf16 (Mixed Precision) ---
+Epoch 1/5, bf16 QAT Accuracy: 77.14%
+Epoch 2/5, bf16 QAT Accuracy: 77.12%
+Epoch 3/5, bf16 QAT Accuracy: 77.24%
+Epoch 4/5, bf16 QAT Accuracy: 77.23%
+Epoch 5/5, bf16 QAT Accuracy: 77.62%
+Final bf16 QAT Accuracy: 77.62%
+
+--- Running QAT for fp16 (Mixed Precision) ---
+Epoch 1/5, fp16 QAT Accuracy: 76.95%
+Epoch 2/5, fp16 QAT Accuracy: 77.21%
+Epoch 3/5, fp16 QAT Accuracy: 77.54%
+Epoch 4/5, fp16 QAT Accuracy: 77.26%
+Epoch 5/5, fp16 QAT Accuracy: 77.23%
+Final fp16 QAT Accuracy: 77.23%
+
+
+--- Running QAT for int4 ---
+Model prepared for int4 QAT.
+Starting int4 QAT fine-tuning for 10 epochs...
+Epoch 1/10, Simulated int4 QAT Accuracy: 75.30%
+Epoch 2/10, Simulated int4 QAT Accuracy: 75.51%
+Epoch 3/10, Simulated int4 QAT Accuracy: 75.59%
+Epoch 4/10, Simulated int4 QAT Accuracy: 75.66%
+Epoch 5/10, Simulated int4 QAT Accuracy: 75.67%
+Epoch 6/10, Simulated int4 QAT Accuracy: 75.68%
+Epoch 7/10, Simulated int4 QAT Accuracy: 75.83%
+Epoch 8/10, Simulated int4 QAT Accuracy: 75.77%
+Epoch 9/10, Simulated int4 QAT Accuracy: 75.81%
+Epoch 10/10, Simulated int4 QAT Accuracy: 75.83%
+Finished int4 QAT fine-tuning.
+Model converted for final int4 inference.
+Final Converted int4 QAT Accuracy: 75.83%
+
+
+--- Running QAT for int8 (Standard PyTorch Flow) ---
+Model prepared for int8 QAT.
+Starting int8 QAT fine-tuning for 2 epochs...
+Epoch 1/2, Simulated int8 QAT Accuracy: 76.82%
+Epoch 2/2, Simulated int8 QAT Accuracy: 76.90%
+Finished int8 QAT fine-tuning.
+Could not run int8 QAT: Unsupported qscheme: per_channel_affine
+✅ Saved int8 QAT model to 'model_int8_qat.pth'
