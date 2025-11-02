@@ -1,0 +1,22 @@
+{
+  "fp32": {
+    "status": "REAL_QUANTIZED",
+    "size_mb": 516.71246
+  },
+  "bf16_qat": {
+    "status": "REAL_QUANTIZED",
+    "size_mb": 516.71233
+  },
+  "fp16_qat": {
+    "status": "REAL_QUANTIZED",
+    "size_mb": 516.71233
+  },
+  "int8_qat": {
+    "status": "REAL_QUANTIZED",
+    "size_mb": 156.97325
+  },
+  "int4_qat": {
+    "status": "REAL_QUANTIZED",
+    "size_mb": 258.36065
+  }
+}

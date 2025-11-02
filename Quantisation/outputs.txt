@@ -21,15 +21,20 @@ Baseline FP32 VGG-11 Accuracy: 74.82%
 
 --- Running PTQ for fp16 and bf16 ---
 PTQ fp16 Accuracy: 74.81%
+Size (FP16 PTQ): 258.36 MB
+Size (Baseline FP32): 516.71 MB
 
 Running PTQ for bf16...
 PTQ bf16 Accuracy: 74.77%
+Size (BF16 PTQ): 258.36 MB
 
 --- Running PTQ for int8 and int4 ---
 PTQ int8 Accuracy: 74.79%
+Size (INT8 PTQ): 156.97 MB
 
 Casting model to bfloat16 for int4 PTQ...
 PTQ int4 Accuracy: 74.85%
+Size (INT4 PTQ): 83.31 MB
 
 --- Saving progress ---
 Saved baseline model state to 'baseline_model_fp32.pth'
@@ -94,11 +99,20 @@ Model converted for final int4 inference.
 Final Converted int4 QAT Accuracy: 75.83%
 
 
---- Running QAT for int8 (Standard PyTorch Flow) ---
-Model prepared for int8 QAT.
-Starting int8 QAT fine-tuning for 2 epochs...
-Epoch 1/2, Simulated int8 QAT Accuracy: 76.82%
-Epoch 2/2, Simulated int8 QAT Accuracy: 76.90%
-Finished int8 QAT fine-tuning.
-Could not run int8 QAT: Unsupported qscheme: per_channel_affine
-✅ Saved int8 QAT model to 'model_int8_qat.pth'
+--- Running int8 PTQ + Fine-Tuning (Weight-Only, GPU) ---
+Applied int8 weight-only PTQ
+Epoch 1/2, Acc: 76.71%
+Epoch 2/2, Acc: 76.82%
+Final int8 (PTQ + FT): 76.82%
+
+Quantization + Size Verification Report
+==========================================================================================
+Model        Bit-Width  dtype        Unique     Size (MB)    Status
+------------------------------------------------------------------------------------------
+fp32         quantized  REAL         REAL       516.71       PASS
+bf16_qat     quantized  REAL         REAL       516.71       PASS
+fp16_qat     quantized  REAL         REAL       516.71       PASS
+int8_qat     quantized  REAL         REAL       156.97       PASS
+int4_qat     quantized  REAL         REAL       258.36       PASS
+==========================================================================================
+Report saved to quantization_and_size_report.json

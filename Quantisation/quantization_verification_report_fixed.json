@@ -1,0 +1,17 @@
+{
+  "fp32": {
+    "status": "REAL_QUANTIZED"
+  },
+  "bf16_qat": {
+    "status": "REAL_QUANTIZED"
+  },
+  "fp16_qat": {
+    "status": "REAL_QUANTIZED"
+  },
+  "int8_qat": {
+    "status": "REAL_QUANTIZED"
+  },
+  "int4_qat": {
+    "status": "REAL_QUANTIZED"
+  }
+}

@@ -13,5 +13,5 @@ data/
 model_bf16_qat.pth
 model_fp16_qat.pth
 model_int4_qat.pth
-model_int8_qat.pth
+model_int8_ptq_ft.pth
 baseline_model_fp32.pth
