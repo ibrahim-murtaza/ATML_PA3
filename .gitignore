@@ -10,3 +10,8 @@ teacher_vgg16_color_invariant.pth
 student_vgg11_LM_VGG19_best.pth
 teacher_vgg19_cifar100_best.pth
 data/
+model_bf16_qat.pth
+model_fp16_qat.pth
+model_int4_qat.pth
+model_int8_qat.pth
+baseline_model_fp32.pth
