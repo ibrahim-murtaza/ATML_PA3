@@ -7,4 +7,6 @@ student_vgg11_CRD_best.pth
 student_vgg11_HINTS_best.pth
 student_vgg11_CRD_color_best.pth
 teacher_vgg16_color_invariant.pth
+student_vgg11_LM_VGG19_best.pth
+teacher_vgg19_cifar100_best.pth
 data/

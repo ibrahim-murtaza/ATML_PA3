@@ -1,0 +1,13 @@
+{
+    "student_vgg16_accuracy": 69.27,
+    "student_vgg19_accuracy": 68.26,
+    "accuracy_difference": 1.009999999999991,
+    "n_test_samples": 10000,
+    "correct_vgg16": 6927,
+    "correct_vgg19": 6826,
+    "sample_difference": 101,
+    "chi2_statistic": 2.3278824530168434,
+    "p_value": 0.12707463626648066,
+    "degrees_of_freedom": 1,
+    "statistically_significant": false
+}

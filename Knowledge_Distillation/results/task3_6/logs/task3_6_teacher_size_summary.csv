@@ -1,0 +1,5 @@
+Model,Method,Best Test Acc@1 (%),Best Test Acc@5 (%)
+Teacher (VGG-16),N/A,74.0,90.54
+Student (VGG-11),LM (from VGG-16),69.27,88.07
+Teacher (VGG-19),N/A,73.83,90.14
+Student (VGG-11),LM (from VGG-19),68.26,87.26
